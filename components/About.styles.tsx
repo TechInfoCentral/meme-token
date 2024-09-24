@@ -10,10 +10,10 @@ export const AboutWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  background: url("Glowb.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
+  // background: url("Glowb.svg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: left;
   z-index: 1;
   position: relative;
   &::before {
@@ -136,8 +136,8 @@ export const LineWrapper = styled.div`
   }
 `;
 export const EconomicsWrapper = styled(AboutWrapper)`
-  background: url("/Glowing.svg");
-  background-repeat: no-repeat;
+  // background: url("/Glowing.svg");
+  // background-repeat: no-repeat;
   backdrop-filter: blur(15px);
   &::before {
     background-image: none;
@@ -239,9 +239,9 @@ export const WhatImage = styled.div`
   background: #201124;
   box-shadow: -7px 6px 57px 6px rgba(172, 247, 128, 0.25);
   border-radius: 10px;
-  background: url("/Frog.png");
+  background: url("/universe.png");
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
   @media (max-width: 768px) {
     width: 100%;
@@ -249,5 +249,5 @@ export const WhatImage = styled.div`
 `;
 
 export const WhatContent = styled.div`
-  width: 100%;
+  width: 50%;
 `;

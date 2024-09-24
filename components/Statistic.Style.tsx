@@ -29,7 +29,7 @@ export const StaticContainer = styled.div`
 `;
 export const StaticHeader = styled.div`
   color: #88d7cf;
-  font-size: 1rem;
+  font-size: 1.5rem;
 `;
 export const StaticBody = styled.div`
   height: 100%;
@@ -48,7 +48,7 @@ export const StaticBody = styled.div`
 `;
 export const StaticTitle = styled.div`
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
@@ -120,7 +120,7 @@ export const StaticAdress = styled.div`
 export const StaticImage = styled.div`
   width: 100%;
   height: 100%;
-  background: url("/frogpepe.png");
+  background: url("/jetson-space.png");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;

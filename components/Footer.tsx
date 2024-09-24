@@ -7,7 +7,7 @@ import {
   FooterIconWrapper,
   FooterLink,
   FooterText,
-  FooterTile,
+  // FooterTile,
   FooterWrapper,
 } from "./Footer.Styles";
 import Telegram from "@/public/Telegram";
@@ -20,13 +20,13 @@ export default function Footer() {
     <FooterWrapper>
       <FooterContainer>
         <FooterBody>
-          <FooterTile>🚀BOB PEPE AI</FooterTile>
+          <img src="/logo.png" alt="Astro Jetson Logo" style={{ height: 'auto', width: '250px' }} />
           <FooterText>
-            BOB PEPE AI is a community driven, fair launched DeFi Token.
+            Astro Jetson is a community driven, fair launched DeFi Token.
           </FooterText>
           <FooterLink>
             <span>
-              &copy;{new Date().getFullYear()} BOB PEPE AI. All rights reserved.
+            Astro Jetson&copy;{new Date().getFullYear()}  All rights reserved.
             </span>
           </FooterLink>
         </FooterBody>
@@ -49,12 +49,12 @@ export default function Footer() {
             <FooterLink>
               <Link href="">Airdrop</Link>
             </FooterLink>
-            <FooterLink>
+            {/* <FooterLink>
               <Link href="">Lucky Drop</Link>
             </FooterLink>
             <FooterLink>
               <Link href="">Earn</Link>
-            </FooterLink>
+            </FooterLink> */}
           </FooterBody>
 
           <FooterBody>
@@ -65,9 +65,9 @@ export default function Footer() {
             <FooterLink>
               <Link href="">Privacy Policy</Link>
             </FooterLink>
-            <FooterLink>
+            {/* <FooterLink>
               <Link href="">Brand</Link>
-            </FooterLink>
+            </FooterLink> */}
           </FooterBody>
         </FooterContent>
         <FooterBody>

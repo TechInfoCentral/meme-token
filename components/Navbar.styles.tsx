@@ -14,6 +14,7 @@ export const NavbarWrapper = styled.div`
   justify-content: center;
   backdrop-filter: blur(15px);
   background: #201124;
+  // background: #000000;
   position: fixed;
   z-index: 10;
 `;

@@ -49,7 +49,7 @@ export default function NftSection() {
             </NftGridLeft>
 
             <NftGridRight>
-              <Image src="/Frog.png" width={273} height={273} alt="nft" />
+              <Image src="/universe.png" width={273} height={273} alt="nft" />
               <NftButton>Mint PEPE</NftButton>
             </NftGridRight>
           </NftGrid>

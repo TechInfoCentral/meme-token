@@ -16,9 +16,9 @@ export default function EconomicsSection() {
   return (
     <EconomicsWrapper>
       <EconomicsContainer>
-        <AboutTitle>BOBtonomics Distribution</AboutTitle>
+        <AboutTitle>Tokenomics</AboutTitle>
         <WhatContent>
-          <AboutListWrapper>
+          {/* <AboutListWrapper>
             <AboutList>
               25% airdrop tokens distributed to eligible wallets which have
               minted NFTs. Remaining tokens will be burned.
@@ -30,7 +30,7 @@ export default function EconomicsSection() {
             <AboutList>
               15% will be distributed to the marketing team.
             </AboutList>
-          </AboutListWrapper>
+          </AboutListWrapper> */}
           <AboutRightItem>
             <AboutImage />
           </AboutRightItem>

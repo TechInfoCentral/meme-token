@@ -33,7 +33,7 @@ export const LandingContainer = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("/BobGun.svg") #000;
+    background: url("/landing.png") #000;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,7 +43,7 @@ export const LandingContainer = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     &::before {
-      background: url("/BobGun.svg");
+      background: url("/landing.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: bottom;

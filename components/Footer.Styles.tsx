@@ -56,7 +56,7 @@ export const FooterText = styled.p`
 `;
 export const FooterHeader = styled.div`
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   @media (max-width: 1200px) {
     font-size: 1.2rem;
   }
@@ -76,7 +76,7 @@ export const FooterContent = styled.div`
 `;
 export const FooterLink = styled.div`
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   line-height: 2.5rem;
   display: flex;
   align-items: center;
