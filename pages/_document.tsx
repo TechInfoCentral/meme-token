@@ -1,20 +1,19 @@
 import Document, { DocumentContext, DocumentInitialProps } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { AppType } from "next/app"; // Import AppType correctly from 'next/app'
-import { ReactElement } from "react"; // Ensure we import ReactElement for proper typing
+import { AppType } from "next/app";
+import React from "react";
 
 export default class MyDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> {
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App: AppType) => (props): ReactElement => {
-            return sheet.collectStyles(<App {...props} />); // Ensure we return a ReactElement
+          enhanceApp: (App: AppType) => (props) => {
+            const element = <App {...props} />;
+            return sheet.collectStyles(element); // No explicit type casting
           },
         });
 
