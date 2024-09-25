@@ -1,7 +1,7 @@
 import Document, { DocumentContext, DocumentInitialProps } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { AppType } from "next/dist/shared/lib/utils"; // Ensure AppType is imported from Next.js
-import { ReactElement } from "react"; // Import ReactElement to ensure proper typing
+import { AppType } from "next/dist/shared/lib/utils";
+import { ReactNode } from "react"; // Import ReactNode for proper typing
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App: AppType) => (props): ReactElement =>
+          enhanceApp: (App: AppType) => (props): ReactNode =>
             sheet.collectStyles(<App {...props} />),
         });
 
