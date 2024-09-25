@@ -1,23 +1,11 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Toaster } from "react-hot-toast";
-import { useEffect, useState } from "react";
-import GlobalProvider from "@/context/GlobalProvider";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    setReady(true);
-  }, []);
-
   return (
     <>
-      {ready ? (
-        <GlobalProvider>
-          <Component {...pageProps} />
-        </GlobalProvider>
-      ) : null}
+      <Component {...pageProps} />
       <Toaster
         toastOptions={{
           style: {
