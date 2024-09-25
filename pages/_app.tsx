@@ -1,74 +1,23 @@
-import { configs } from "@/config";
-import {
-  EthereumClient,
-  w3mConnectors,
-  w3mProvider,
-} from "@web3modal/ethereum";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Toaster } from "react-hot-toast";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
-import {
-  arbitrum,
-  avalanche,
-  bsc,
-  fantom,
-  gnosis,
-  mainnet,
-  optimism,
-  polygon,
-} from "wagmi/chains";
 import { useEffect, useState } from "react";
-import { Web3Modal } from "@web3modal/react";
 import GlobalProvider from "@/context/GlobalProvider";
 
-const projectId = configs.INFURA_ID;
-
-const chains = [
-  mainnet,
-  polygon,
-  avalanche,
-  arbitrum,
-  bsc,
-  optimism,
-  gnosis,
-  fantom,
-];
-
-const { provider } = configureChains(chains, [w3mProvider({ projectId })]);
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors: w3mConnectors({ version: 1, chains, projectId }),
-  provider,
-});
-const ethereumClient = new EthereumClient(wagmiClient, chains);
 export default function App({ Component, pageProps }: AppProps) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     setReady(true);
   }, []);
+
   return (
     <>
       {ready ? (
-        <WagmiConfig client={wagmiClient}>
-          <GlobalProvider>
-            <Component {...pageProps} />
-          </GlobalProvider>
-        </WagmiConfig>
+        <GlobalProvider>
+          <Component {...pageProps} />
+        </GlobalProvider>
       ) : null}
-      <Web3Modal
-        projectId={projectId}
-        ethereumClient={ethereumClient}
-        themeVariables={{
-          "--w3m-font-family": "Kanit, sans-serif",
-          "--w3m-accent-color": "#83F7A3",
-          "--w3m-background-color": "#ACF780",
-          "--w3m-background-border-radius": "10px",
-          "--w3m-accent-fill-color": "#000",
-          "--w3m-background-image-url": "none",
-        }}
-      />
       <Toaster
         toastOptions={{
           style: {
