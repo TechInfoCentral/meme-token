@@ -1,8 +1,13 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Toaster } from "react-hot-toast";
+import { FunctionComponent } from "react";
 
-export default function App({ Component, pageProps }: AppProps) {
+interface CustomAppProps extends AppProps {
+  Component: FunctionComponent; // Ensuring Component is a valid React Function Component
+}
+
+export default function App({ Component, pageProps }: CustomAppProps) {
   return (
     <>
       <Component {...pageProps} />
