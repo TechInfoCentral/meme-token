@@ -1,6 +1,5 @@
 import Document, { DocumentContext, DocumentInitialProps } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { AppType } from "next/app";
 import React from "react";
 
 export default class MyDocument extends Document {
@@ -11,9 +10,9 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App: AppType) => (props) => {
-            const element = <App {...props} />;
-            return sheet.collectStyles(element); // No explicit type casting
+          enhanceApp: (App) => (props) => {
+            // Directly return the styles collected from the App component
+            return sheet.collectStyles(<App {...props} /> as React.ReactElement);
           },
         });
 
